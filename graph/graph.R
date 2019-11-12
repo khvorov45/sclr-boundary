@@ -1,13 +1,15 @@
 # Graph
 # Arseniy Khvorov
 # Created 2019/11/05
-# Last edit 2019/11/05
+# Last edit 2019/11/12
 
 library(sclr)
 library(tidyverse)
 library(ggdark) # devtools::install_github("khvorov45/ggdark")
 
 graph_folder <- "graph"
+
+# Functions ===================================================================
 
 graph_line <- function(par_combos, var, x_lab, x_breaks) {
   par_combos %>%
@@ -30,6 +32,8 @@ save_line <- function(plot, name) {
     width = 10, height = 7.5, units = "cm", device = "pdf"
   )
 }
+
+# Script ======================================================================
 
 base1 <- sclr_ideal_data(theta = 1e6, seed = 20191106)
 
